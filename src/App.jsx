@@ -19,7 +19,7 @@ function App() {
  
  </div>
 
-  )
+  );
 }
 // This is what a component looks like 
 export default App
