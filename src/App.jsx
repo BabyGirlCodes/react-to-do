@@ -4,28 +4,16 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [showMessage, setShowMessage] = useState(false);
-  const toggleMessage  = () => {
-    setShowMessage (!showMessage);
-  }
-  const[appear, setAppear] = useState(false);
-  const openMessage = () => {
-      setAppear (!appear);
-  }
+  const [task, setTask] = useState("");
   return (
  <div>
-  <h1>Show/Hide Message</h1>
-  <button onClick={toggleMessage}>
-    {showMessage ? "Hide" : "Show"} Message
-  </button>
-
-  <button onClick={openMessage}>
-    {appear ? "Hide" : "Show"} Message
-  </button>
-
-  {showMessage && <p>This is a hidden message! 👀</p>}
-  {appear && <p>Hiding second message</p>}
+  <h1>Type Something</h1>
+  <input 
+  type="text" 
+  onChange={(e) => setTask(e.target.value)}/>
+  <p>You typed: {task}</p>
  </div>
+
   )
 }
 // This is what a component looks like 
