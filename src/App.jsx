@@ -7,11 +7,16 @@ function App() {
   const [task, setTask] = useState("");
   return (
  <div>
-  <h1>Type Something</h1>
+  <h1>My Task List</h1>
   <input 
   type="text" 
-  onChange={(e) => setTask(e.target.value)}/>
+  value={task}
+  onChange={(e) => setTask(e.target.value)}
+  placeholder='Enter a task'
+  />
+  <button>Add</button>
   <p>You typed: {task}</p>
+ 
  </div>
 
   )
